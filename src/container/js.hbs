@@ -1,0 +1,60 @@
+
+<div>
+    <div>
+        <h1>{{name}}</h1>
+        <hr>
+        <h2>{{description}}</h2>
+        {{#with history}}
+        <h3>{{year}}, {{founder}}</h3>
+        {{/with}}
+    </div>
+        <br>
+        <button type="button" class="btn btn-primary">{{types}}</button>
+
+
+    <div>
+        <br>
+        <h3>Syntax</h3>
+        <br>
+        {{#with syntax}}
+        <ul>
+            <li><button type="button" class="btn btn-outline-primary">{{variables}}</button></li>
+            <li><button type="button" class="btn btn-outline-secondary">{{functions}}</button></li>
+            <li><button type="button" class="btn btn-outline-success">{{conditionals}}</button></li>
+            <li><button type="button" class="btn btn-outline-danger">{{loops}}</button></li>
+            <li><button type="button" class="btn btn-outline-warning">{{classes}}</button></li>
+        </ul>
+        
+        {{/with}}
+    </div>
+
+    <div>
+        <h3>Features</h3>
+        <p class="d-inline-flex gap-1">
+        <a href="#" class="btn active" role="button" data-bs-toggle="button" aria-pressed="true">{{features}}</a>
+        </p>
+        <br>
+
+        <h3>Libraries</h3>
+        <p class="d-inline-flex gap-1">
+        <a href="#" class="btn active" role="button" data-bs-toggle="button" aria-pressed="true">{{libraries}}</a>
+        </p>
+        <br>
+
+        <h3>Tools</h3>
+        <p class="d-inline-flex gap-1">
+        <a href="#" class="btn active" role="button" data-bs-toggle="button" aria-pressed="true">{{tools}}</a>
+        </p>
+    </div>
+
+    <div>
+        <h3>Community</h3>
+        {{#each community}}
+        <ul>
+            <li><button type="button" class="btn btn-primary btn-sm">Name:{{name}}</button></li>
+            <li><button type="button" class="btn btn-secondary btn-sm">Type:{{type}}</button></li>
+        </ul>
+        {{/each}}
+    </div>
+</div>
+
