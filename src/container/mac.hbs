@@ -1,0 +1,89 @@
+
+
+
+
+<div>
+    <h1>{{name}}</h1>
+    <h1>{{description}}</h1>
+    <h2 class="font-monospace">{{price}}</h2>
+    <button type="button" class="btn btn-primary btn-lg">{{category}}</button>
+    {{#with features}}
+        <h2>Features:</h2>
+        {{#with processor}}
+            <h4>Processor</h4>
+            <ul>
+                <li>brand-{{brand}}</li>
+                <li>model-{{model}}</li>
+                <li>speed-{{speed}}</li>
+                <li>cores-{{cores}}</li>
+                <li>cache-{{cache}}</li>
+            </ul>
+        {{/with}}
+        {{#with memory}}
+            <h4>Memory:</h4>
+            <ul>
+                <li>type-{{type}}</li>
+                <li>size-{{size}}</li>
+                <li>speed-{{speed}}</li>
+            </ul>
+        {{/with}}
+        {{#with storage}}
+            <h4>Storage:</h4>
+            <ul>
+                <li>type-{{type}}</li>
+                <li>size-{{size}}</li>
+            </ul>
+        {{/with}}
+        {{#with display}}
+            <h4>Display:</h4>
+            <ul>
+                <li><button type="button" class="btn btn-outline-primary">size-{{size}}</button></li>
+                <li><button type="button" class="btn btn-outline-secondary">resolution-{{resolution}}</button></li>
+                <li><button type="button" class="btn btn-outline-success">technology-{{technology}}</button></li>
+                <li><button type="button" class="btn btn-outline-danger">color space-{{color_space}}</button></li>
+                <li><button type="button" class="btn btn-outline-warning">brightness-{{brightness}}</button></li>
+                <li><button type="button" class="btn btn-outline-info">refresh rate-{{refresh_rate}}</button></li>
+            </ul>
+        {{/with}}
+        {{#with graphics}}
+            <h4>Graphics</h4>
+            <ul>
+                <li>brand-{{brand}}</li>
+                <li>model-{{model}}</li>
+                <li>memory-{{memory}}</li>
+            </ul>
+        {{/with}}
+        {{#each ports}}
+            <h4>Ports</h4>
+            <ul>
+                <li>type-{{type}}</li>
+                <li>count-{{count}}</li>
+                <li>{{features}}</li>
+            </ul>
+        {{/each}}
+        {{#with battery}}
+            <h4>Battery</h4>
+            <ul>
+                <li>type-{{type}}</li>
+                <li>capacity-{{capacity}}</li>
+                <li>life-{{life}}</li>
+            </ul>
+        {{/with}}
+        <h4>Weight: {{weight}}</h4>
+        {{#with dimensions}}
+            <ul>
+                <li>height-{{height}}</li>
+                <li>width-{{width}}</li>
+                <li>depth-{{depth}}</li>
+            </ul>
+        {{/with}}
+        <h4>Operating system: {{operating_system}}</h4>
+        <button type="button" class="btn btn-primary">Accessories:</button>
+        {{#each accessories}}
+            <ul>
+                <li>name-{{name}}</li>
+                <li>price-{{price}}</li>
+            </ul>
+        {{/each}}
+    {{/with}}
+</div>
