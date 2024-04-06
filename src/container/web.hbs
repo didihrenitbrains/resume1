@@ -1,0 +1,64 @@
+
+
+
+<div>
+    {{#with web}}
+        <h1>Languages</h1>
+        {{#each languages}}
+            <ul>
+                <li>Name: {{name}}</li>
+                <li>Version: {{version}}</li>
+                <li>Description: {{description}}</li>
+            </ul>
+            <br>
+            <hr>
+                {{#each elements}}
+                    <ul>
+                        <h2>Elements</h2>
+                        <li>Name: {{name}}</li>
+                        <li>Description: {{description}}</li>
+                    </ul>
+                    {{#each attributes}}
+                    
+                    <ul>
+                        <h2>Attributes</h2>
+                        <li>Name: {{name}}</li>
+                        <li>Descriptin: {{description}}</li>
+                    </ul>
+                    {{/each}}
+                    <br>
+                    <hr>
+                {{/each}}
+            {{#each properties}}
+                <ul>
+                    <h2>Properties</h2>
+                    <li>Name: {{name}}</li>
+                    <li>Descriptin: {{description}}</li>
+                </ul>
+                {{#each values}}
+                    <ul>
+                        <h2>Values</h2>
+                        <li>Value: {{value}}</li>
+                        <li>Descriptin: {{description}}</li>
+                    </ul>
+                {{/each}}
+                <hr>
+                    {{#each functions}}
+                    <ul>
+                        <h2>Functions</h2>
+                        <li>Name: {{name}}</li>
+                        <li>Descriptin: {{description}}</li>
+                    </ul>
+                    {{/each}}
+                        {{#each parameters}}
+                            <ul>
+                                <h2>Parameters</h2>
+                                <li>Name: {{name}}</li>
+                                <li>Type: {{type}}</li>
+                                <li>Descriptin: {{description}}</li>
+                            </ul>
+                        {{/each}}
+            {{/each}}
+        {{/each}}
+    {{/with}}
+</div>
