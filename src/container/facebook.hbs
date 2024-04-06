@@ -1,0 +1,49 @@
+
+
+
+<div>
+    <h1 style="color: blue;">{{name}}</h1>
+    <br>
+    <h2>Users</h2>
+    {{#each users}}
+    
+        <ul>
+            <li>id:{{id}}</li>
+            <li>name:{{name}}</li>
+            <li>gender:{{gender}}</li>
+            <li>age:{{age}}</li>
+            <button type="button" class="btn btn-success">Friends</button>
+            {{#each friends}}
+                <li>id:{{id}}</li>
+                <li>gender:{{gender}}</li>
+                <li>age:{{age}}</li>
+                <hr>
+                {{#each mutual_friends}}
+                <button type="button" class="btn btn-light">Mutual friends</button>
+                    <li>id:{{id}}</li>
+                    <li>name:{{name}}</li>
+                    <li>gender:{{gender}}</li>
+                    <li>age:{{age}}</li>
+                {{/each}}
+            {{/each}}
+        </ul>
+        <hr>
+        <button type="button" class="btn btn-light">Groups</button>
+        {{#each groups}}
+            <ul>
+                <li>id:{{id}}</li>
+                <li>name:{{name}}</li>
+                <li>description:{{description}}</li>
+                <hr>
+                <button type="button" class="btn btn-info">Members</button>
+                {{#each members}}
+                    <li>id:{{id}}</li>
+                    <li>name:{{name}}</li>
+                    <li>gender:{{gender}}</li>
+                    <li>age:{{age}}</li>
+                {{/each}}
+            </ul>
+            <hr>
+        {{/each}}
+    {{/each}}
+</div>
