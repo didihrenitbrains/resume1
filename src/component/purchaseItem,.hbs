@@ -1,0 +1,30 @@
+<section class="row" >
+        <div style="display: flex;" class="col-12">
+            <div class="col-4">
+                {{#each itemList}}
+                <div>{{number}}</div>
+                <div style="font-weight: bold;">{{status}}</div>
+                
+            </div>
+            <div class="col-4">
+                {{#with amount}}
+                <div>{{title}}</div>
+                <div style="font-weight: bold;">{{value}}</div>
+                {{/with}}
+            </div>
+            <div class="col-3">
+                {{#each images}}
+                <img src="{{this}}" alt="">
+                {{/each}}
+            </div>
+            <div class="col-2">
+                {{#each button}}
+                
+                <a class="btn btn-primary" href="{{link}}">{{text}}</a>
+                
+                {{/each}}
+            </div>
+            <hr>
+            {{/each}}
+        </div>
+    </section>
